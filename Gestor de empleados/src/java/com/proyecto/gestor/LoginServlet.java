@@ -16,13 +16,13 @@ public class LoginServlet extends HttpServlet {
     public void init() {
         userDAO = new UserDAO();
     }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         User user = userDAO.validateUser(username, password);
         if (user != null) {
+            
             HttpSession session = request.getSession();
             session.setAttribute("username", user.getUsername());
             response.sendRedirect("welcome.jsp");
