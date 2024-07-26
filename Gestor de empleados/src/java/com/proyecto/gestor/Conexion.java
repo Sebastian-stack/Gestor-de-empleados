@@ -1,4 +1,3 @@
-
 package com.proyecto.gestor;
 
 import java.sql.Connection;

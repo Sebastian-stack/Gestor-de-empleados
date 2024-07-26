@@ -1,33 +1,50 @@
 package com.proyecto.gestor;
 
 public class User {
-    private int id;
-    private String username;
-    private String password;
+private int id_usuario;
+    private String nombreUsuario;
+    private String clave;
+    private boolean estado;
+    private cargo cargo;
 
-    // Getters y Setters
-    public int getId() {
-        return id;
+    public int getId_usuario() {
+        return id_usuario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
-    public String getPassword() {
-        return password;
+    public String getClave() {
+        return clave;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    public cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(cargo cargo) {
+        this.cargo = cargo;
     }
 }
 

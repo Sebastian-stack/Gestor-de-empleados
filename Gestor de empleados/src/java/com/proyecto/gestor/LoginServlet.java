@@ -22,7 +22,6 @@ public class LoginServlet extends HttpServlet {
 
         User user = userDAO.validateUser(username, password);
         if (user != null) {
-            
             HttpSession session = request.getSession();
             session.setAttribute("username", user.getUsername());
             response.sendRedirect("welcome.jsp");
