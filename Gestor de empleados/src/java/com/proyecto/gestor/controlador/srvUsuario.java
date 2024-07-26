@@ -1,7 +1,7 @@
 package com.proyecto.gestor.controlador;
 
-import Modelo.DAOUSUARIO;
-import Modelo.usuario;
+import com.proyecto.gestor.UserDAO;
+import com.proyecto.gestor.User;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -83,10 +83,10 @@ public class srvUsuario extends HttpServlet {
 
     private void verificar(HttpServletRequest request, HttpServletResponse response) throws Exception{
         HttpSession sesion;
-        DAOUSUARIO dao;
-        usuario usuario;
+        UserDAO dao;
+        User usuario;
         usuario = this.obtenerUsuario(request);
-        dao = new DAOUSUARIO();
+        dao = new UserDAO();
         usuario = dao.identificar(usuario);
         if (usuario != null && usuario.getCargo().getNombreCargo().equals("ADMINISTRADOR")) {
             sesion = request.getSession();
@@ -112,8 +112,8 @@ public class srvUsuario extends HttpServlet {
         
     }
 
-    private usuario obtenerUsuario(HttpServletRequest request) {
-        usuario u = new usuario();
+    private User obtenerUsuario(HttpServletRequest request) {
+        User u = new User();
         u.setNombreUsuario(request.getParameter("txtUsu"));
         u.setClave(request.getParameter("txtPass"));
         return u;
