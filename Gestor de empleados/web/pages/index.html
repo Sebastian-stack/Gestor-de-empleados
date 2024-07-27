@@ -4,38 +4,51 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/estilologin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Empleados</title>
+    <title>Gestor de Empleados</title>
 </head>
-<header>
-
-    <nav class="navbar">
-        <div>
-            <a>Gestión de Empleados</a>
-        </div>
-        <div class="btn_nav">
-            <a href="login.html"><button>Ingresar</button></a>
-            <a href="registro.html"><button>¡¡Registrate!!</button></a>
-        </div>
-
-    </nav>
-
-</header>
-
 <body>
-
-    <div class="div_princi">
-
-        <h1 class="xd">Bienvenido al Gestor de Empleados #1 en el mundo <br>hola <br><br><br><br><br>
-        </h1>
+    
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Usuario">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Contraseña">
+                    </div>
+                    <a href="menuprinci.html" class="button login__submit">
+                        <span class="button__text">Ingresar</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </a>		
+                </form>
+                <div class="social-login">
+                    <a href="registro.jsp">
+                    <button class="button login__submit">
+                        <span class="button__text">Registrarse</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                    </a>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
     </div>
 
 
-</body>
 
+</body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../estilos/estiloTareas.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="card-container">
+        <div class="section" id="sin-comenzar">
+            <h2>Sin Comenzar</h2>
+            <div class="cards"></div>
+            <button class="btn add-btn">Agregar</button>
+        </div>
+
+        <div class="section" id="en-proceso">
+            <h2>En Proceso</h2>
+            <div class="cards"></div>
+            <button class="btn add-btn">Agregar</button>
+        </div>
+
+        <div class="section" id="terminado">
+            <h2>Terminado</h2>
+            <div class="cards"></div>
+            <button class="btn add-btn">Agregar</button>
+        </div>
+    </div>
+
+    <!-- Form modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="card-form">
+                <input type="text" id="card-id" placeholder="ID" required>
+                <textarea id="description" placeholder="Descripción de la tarjeta" required></textarea>
+                <input type="date" id="date" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

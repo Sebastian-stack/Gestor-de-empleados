@@ -13,7 +13,7 @@ public class Conexion {
     private final String baseDatos = "gestionempleado";
     private final String servidor = "jdbc:mysql://localhost/" + baseDatos;
     private final String usuario = "root";
-    private final String clave = "David%2006";
+    private final String clave = "Alejandro134456qw_";
     
     public Connection conectar(){
         Connection cn = null;
