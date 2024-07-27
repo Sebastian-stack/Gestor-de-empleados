@@ -92,11 +92,11 @@ public class srvUsuario extends HttpServlet {
             sesion = request.getSession();
             sesion.setAttribute("usuario", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/vistas/index.jsp").forward(request, response);
+            this.getServletConfig().getServletContext().getRequestDispatcher("/pages/index.jsp").forward(request, response);
         }else if(usuario != null && usuario.getCargo().getNombreCargo().equals("VENDEDOR")){
            sesion = request.getSession();
             sesion.setAttribute("vendedor", usuario);
-            this.getServletConfig().getServletContext().getRequestDispatcher("/vistas/formVendedor.jsp").forward(request, response); 
+            this.getServletConfig().getServletContext().getRequestDispatcher("/pages/formVendedor.jsp").forward(request, response); 
         }else{
             request.setAttribute("msje", "Credenciales Incorrectas");
             request.getRequestDispatcher("identificar.jsp").forward(request, response);
